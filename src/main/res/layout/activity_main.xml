@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@drawable/note1"
+    android:orientation="vertical">
 
-    <Button android:id="@+id/add_item"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="64dp"
-        android:text="ADD ITEM" />
+        android:layout_height="70dp"
+        android:weightSum="1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <Button
+            android:id="@+id/n_list_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Add" />
+        <Button
+            android:id="@+id/btSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abc_ic_voice_search_api_holo_light"
+            android:onClick="speak"
+            />
+
+        <EditText android:id="@+id/list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/new_list"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView"
+        android:background="#ffd800"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
 
     <ListView android:id="@+id/listV_main"
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_below="@+id/textView" />
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
 </LinearLayout>

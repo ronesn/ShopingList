@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/note1"
+    tools:context="il.ac.shenkar.ronesn.new_list$PlaceholderFragment">
+    <LinearLayout android:id="@+id/new_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_vertical_margin"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <LinearLayout android:id="@+id/new_item"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp">
+
+            <Button android:id="@+id/Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Add"
+                />
+            <Button
+                android:id="@+id/btSpeak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/abc_ic_voice_search_api_holo_light"
+                android:onClick="speak"
+                />
+
+            <EditText android:id="@+id/quantity"
+                android:inputType="numberSigned"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="כמות:"
+                />
+
+            <EditText android:id="@+id/edit_message"
+                android:bottom="1dp"
+                android:layout_weight="0.8"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_message"
+                android:nextFocusForward="@+id/quantity"
+                android:focusable="true" />
+        </LinearLayout>
+        <ListView android:id="@+id/listV_main"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+    </LinearLayout>
+
+</RelativeLayout>
